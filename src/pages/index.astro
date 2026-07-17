@@ -13,38 +13,105 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
+			<h1>Hello, Adventurer!</h1>
+			<!-- Slideshow container -->
+			<div class="slideshow-container">
+				<!-- Full-width images with number and caption text -->
+				<div class="mySlides fade">
+				<div class="numbertext">1 / 5</div>
+				<img src="src/content/images/HaruStroll.png" style="width:100%">
+				<div class="text">Haru in her favorite spot</div>
+				</div>
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 5</div>
+					<img src="src/content/images/HaruSpirit.png" style="width:100%">
+					<div class="text">Haru becomes the Spirit of Koisakubanashi</div>
+					</div>
+					<div class="mySlides fade">
+					<div class="numbertext">3 / 5</div>
+					<img src="src/content/images/HaruDonut.png" style="width:100%">
+					<div class="text">Haru tries to deal with city life</div>
+					</div>
+					<div class="mySlides fade">
+					<div class="numbertext">4 / 5</div>
+					<img src="src/content/images/HaruGlide.png" style="width:100%">
+					<div class="text">Haru trying out a technique on a whim</div>
+					</div>
+					<div class="mySlides fade">
+					<div class="numbertext">5 / 5</div>
+					<img src="src/content/images/HaruAvenge.png" style="width:100%">
+					<div class="text">Haru vows vengeance</div>
+					</div>
+					<!-- Next and previous buttons -->
+					<a class="prev" onclick="plusSlides(-1)">❮</a>
+					<a class="next" onclick="plusSlides(1)">❯</a>
+				</div>
+				<br>
+				<!-- The dots/circles -->
+				<div style="text-align:center">
+				<span class="dot" onclick="showSlide(1)"></span>
+				<span class="dot" onclick="showSlide(2)"></span>
+				<span class="dot" onclick="showSlide(3)"></span>
+				<span class="dot" onclick="showSlide(4)"></span>
+				<span class="dot" onclick="showSlide(5)"></span>
+			</div>
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+				Welcome to the official site of Forest Visual Tales! Site will show
+				you our catalog of stories and where to read them!
 			</p>
 			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
+				At present, it's just Haru Hayashi, but there are big plans to expand
+				into new series in the future and your support will make that possible,
+				so, if you can, please help support Haru's epic journey and future
+				publications to come! Donations are highly appreciated, but, just
+				sitting down to read her adventure that sometimes becomes extremely
+				absurd and dropping a like is a great way to support her too!
 			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<p>fhank you for those who have supported her in the past and a hearty
+			welcome to those who join her quest in the future!</p>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<script>
+	let slideIndex = 1;
+	showSlides();
+
+	// Next/previous controls
+	function plusSlides(n) {
+	showSlide(slideIndex += n);
+	}
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+	showSlide(slideIndex = n);
+	}
+
+	function showSlide(n) {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		let dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+	}
+	function showSlides() {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}
+		slides[slideIndex-1].style.display = "block";
+		setTimeout(showSlides, 5000); // Change image every 2 seconds
+		}
+</script>
