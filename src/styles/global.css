@@ -159,6 +159,11 @@ hr {
 	height: 50px;
 }
 
+.social-links-big img{
+	width: 100%;
+	max-width: 200px;
+}
+
 * {box-sizing: border-box;}
 /* Slideshow container */
 slideshow-container {
