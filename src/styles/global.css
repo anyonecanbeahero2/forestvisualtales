@@ -127,6 +127,18 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
+
+.fullWidth{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.bodylinks{
+	display: flex;
+	justify-content: center;
+}
+
 @media (max-width: 720px) {
 	body {
 		font-size: 18px;
