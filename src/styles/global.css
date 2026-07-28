@@ -176,6 +176,11 @@ hr {
 	max-width: 200px;
 }
 
+.mainlogo{
+	width: 100%;
+	max-width: 100px;
+}
+
 * {box-sizing: border-box;}
 /* Slideshow container */
 slideshow-container {
