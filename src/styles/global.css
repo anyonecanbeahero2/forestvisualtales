@@ -179,6 +179,8 @@ hr {
 .mainlogo{
 	width: 100%;
 	max-width: 100px;
+	display: flex;
+    justify-self: center;
 }
 
 * {box-sizing: border-box;}
