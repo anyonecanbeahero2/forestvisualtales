@@ -9,19 +9,17 @@ import { SITE_TITLE } from '../consts';
 			<img class="mainlogo" src="/logos/fvt.png"/>
 			<h2><a href="/">{SITE_TITLE}</a></h2>
 		</div>
-		<div class="internal-links">
-			<HeaderLink href="/tales">Tales</HeaderLink>
-			<HeaderLink href="http://shop.forestvisualtales.com">Store</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-		</div>
 		<div class="social-links">
+			<a href="https://mangaplus-creators.jp/titles/sv2606042220270027404798" target="_blank">
+				<span class="sr-only">Follow Forest Visual Tales on Manga Plus Creators</span>
+				<img src="/logos/gc.jpg">
+			</a>
 			<a href="https://globalcomix.com/c/haru-hayashi" target="_blank">
-				<span class="sr-only">Follow Forest Visual Tales on Blue Sky</span>
+				<span class="sr-only">Follow Forest Visual Tales on GlobalComix</span>
 				<img src="/logos/mpc.png">
 			</a>
-			<a href="https://mangaplus-creators.jp/titles/sv2606042220270027404798" target="_blank">
-				<span class="sr-only">Follow Forest Visual Tales on Instagram</span>
-				<img src="/logos/gc.jpg">
+			<a href="https://shop.forestvisualtales.com" target="_blank">
+				<span>Store</span>
 			</a>
 		</div>
 	</nav>
@@ -60,10 +58,5 @@ import { SITE_TITLE } from '../consts';
 	.social-links,
 	.social-links a {
 		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
 	}
 </style>
